@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Fruit Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- The div.search-container contains all elements related to the search functionality.
+The input field with id="fruit" allows users to type in the fruit name they are searching for.
+The div.suggestions with an empty ul element will be populated with search suggestions dynamically.
+The button.search-button is used to select a random fruit from the list -->
+<div class="search-container">
+	<input type="text" name="fruit" id="fruit" placeholder="Search fruit 🍎">
+	<div class="suggestions">
+		<ul></ul>
+	</div>
+    <button class ="search-button">Select a Random Fruit</button>
+</div>
+<!-- partial -->
+  <script  src="./app.js"></script>
+
+</body>
+</html>

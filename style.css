@@ -1,0 +1,80 @@
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* :focus {
+   /* TODO */
+  /* } */ 
+  
+  body {
+      /* gradient made using https://cssgradient.io */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(53,121,9,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 42vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Styles the input elements with a semi-transparent white background, a specific font family, padding, and an orange bottom border. */
+  input {
+    background-color: rgba(255, 255, 255, .3);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5em 1em;
+    border: none;
+    border-bottom: 2px solid #da621c;
+  }
+  
+  /* Sets the width of the search container to 500px. */
+  .search-container {
+    width: 500px;
+  }
+  
+  /* Styles the input inside the search container with a gradient background, removes outline and borders, sets specific height and width, padding, border radius, opacity, font size, and color. */
+  .search-container input {
+   /* gradient made using https://cssgradient.io */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 35%, rgba(0,212,255,1) 100%);
+    outline: none;
+    border: none;
+    height: 55px;
+    width: 100%;
+    padding: 0 40px 0 20px;
+    border-radius: 5px;
+    opacity: 0.75;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+  }
+
+  /* Styles the suggestions container with a dark background, border radius, opacity, font family, and text color. */
+  .search-container .suggestions {
+    background: rgb(2,0,36);
+    border-radius: 5px;
+    opacity: 0.50;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+  }
+  
+  /* The ul styles set a background color and remove default list styles.
+      ul.has-suggestions uses display: flex to arrange list items in a row.
+      ul li styles each list item with no default list style, border radius, and padding.
+      ul li:hover adds a hover effect with a transition duration and a semi-transparent background color. */
+  ul {
+    background: #eaa031;
+  list-style: none;
+  }
+  ul.has-suggestions {
+    display: flex;
+  }
+  ul li {
+    list-style: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+  }
+  ul li:hover {
+    transition-duration : 500ms;
+    background-color : rgba(227,232,229,0.5);
+  }
+  
+  
