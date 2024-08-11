@@ -13,7 +13,8 @@ function search(str) {
 	let results = [];
 
     //Filters out the values of  fruits in array to match results as true, otherwise it will append an empty value.
-    fruit.filter(fruit => fruit.toLocaleLowerCase().includes(str) ? results.push(fruit) : null);
+    // fruit.filter(fruit => fruit.toLocaleLowerCase().includes(str) ? results.push(fruit) : null);
+	results = fruit.filter(fruit => fruit.toLocaleLowerCase().includes(str));
 
     //Returns Results  
 	return results;
@@ -31,10 +32,14 @@ function searchHandler(e) {
 
 // Displays up to five suggestions from the search results as list items.
 function showSuggestions(results, inputVal) {
+	// Clear previous suggestions
+	suggestions.innerHTML = '';
+	//displays abbreviated results--up to first five elements
+	const MAX_NUM_RESULTS = 5;
 	//userinput to display suggestions upon user keyup events
 	if (results.length > 0){
-		//displays abbreviated results--up to first five elements
-		for (let i = 0; i < results.length && i < 5; i++){
+		
+		for (let i = 0; i < results.length && i < MAX_NUM_RESULTS; i++){
 			//created new list item element
 			const newLi = document.createElement("li");
 			//innerText of <li> set to index item in results array
@@ -71,3 +76,6 @@ function btnSelect(){
 input.addEventListener('keyup', searchHandler);
 suggestions.addEventListener('click', useSuggestion);
 searchButton.addEventListener('click', btnSelect);
+
+
+

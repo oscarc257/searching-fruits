@@ -54,6 +54,7 @@
     opacity: 0.50;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
+    cursor: pointer;
   }
   
   /* The ul styles set a background color and remove default list styles.
